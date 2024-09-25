@@ -5,10 +5,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-# Step to build the parent POM
+# Step to build and install the parent POM
 - task: Maven@3
   inputs:
-    mavenPomFile: 'pom.xml'   # Build the parent POM first
+    mavenPomFile: 'pom.xml'   # Path to the parent POM
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
